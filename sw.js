@@ -1,10 +1,7 @@
-const CACHE_STATIC = 'fdm-static-v2';
+const CACHE_STATIC = 'fdm-static-v3';
 const CACHE_CONTENT = 'fdm-content-v1';
 
 const PRECACHE = [
-  '/',
-  '/index.html',
-  '/app.html',
   '/manifest.json',
   '/assets/css/tokens.css',
   '/assets/css/base.css',
@@ -13,6 +10,7 @@ const PRECACHE = [
   '/assets/js/main.js',
   '/assets/js/app.js',
   '/assets/js/content.js',
+  '/assets/js/sw-register.js',
   '/assets/logo.svg',
   '/assets/icons/icon-192.png',
   '/assets/icons/icon-512.png',
@@ -42,6 +40,7 @@ self.addEventListener('activate', event => {
 self.addEventListener('fetch', event => {
   const url = new URL(event.request.url);
 
+  // Network First pour le contenu éditorial
   if (url.pathname.startsWith('/content/')) {
     event.respondWith(
       fetch(event.request)
@@ -52,10 +51,33 @@ self.addEventListener('fetch', event => {
         })
         .catch(() => caches.match(event.request))
     );
-  } else {
-    event.respondWith(
-      caches.match(event.request)
-        .then(cached => cached || fetch(event.request))
-    );
+    return;
   }
+
+  // Network First pour les pages HTML — toujours la dernière version
+  if (url.pathname === '/' || url.pathname.endsWith('.html')) {
+    event.respondWith(
+      fetch(event.request)
+        .then(response => {
+          const clone = response.clone();
+          caches.open(CACHE_STATIC).then(cache => cache.put(event.request, clone));
+          return response;
+        })
+        .catch(() => caches.match(event.request))
+    );
+    return;
+  }
+
+  // Cache First pour CSS, JS, images, fonts — performance offline
+  event.respondWith(
+    caches.match(event.request)
+      .then(cached => {
+        if (cached) return cached;
+        return fetch(event.request).then(response => {
+          const clone = response.clone();
+          caches.open(CACHE_STATIC).then(cache => cache.put(event.request, clone));
+          return response;
+        });
+      })
+  );
 });
