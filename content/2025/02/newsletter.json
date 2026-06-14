@@ -1,0 +1,43 @@
+{
+  "id": "2025-02-newsletter",
+  "type": "newsletter",
+  "title": "Le langage se construit bien avant les premiers mots",
+  "theme": "langage-communication",
+  "age_range": ["0-1", "1-2", "2-3", "3-4", "4-5"],
+  "published_at": "2025-02-01",
+  "read_time_seconds": 540,
+  "sections": [
+    {
+      "type": "intro",
+      "body": "Le premier mot de votre enfant — souvent «mama» ou «papa» — est le fruit d'un travail invisible qui a commencé bien avant sa naissance. Dès le troisième trimestre de grossesse, le fœtus perçoit les intonations de la voix de sa mère. Ce mois-ci, on décortique les étapes du développement du langage pour que vous compreniez ce qui se passe dans la tête de votre enfant — et comment vous y participez chaque jour."
+    },
+    {
+      "type": "insight",
+      "label": "Ce que dit la recherche",
+      "body": "Patricia Kuhl, chercheuse à l'université de Washington, a montré que les bébés sont des «statisticiens linguistiques» : ils apprennent quels sons appartiennent à leur langue maternelle en quelques mois, simplement en écoutant. À 6 mois, un bébé français est déjà spécialisé dans les sons du français. Ce qui accélère le plus l'acquisition du langage ? Non pas les DVD éducatifs ou les applications, mais les conversations en face à face avec des adultes attentifs — ce qu'on appelle le «parentese», cette façon instinctive de parler lentement, avec des intonations exagérées."
+    },
+    {
+      "type": "tip",
+      "label": "À tester ce week-end",
+      "items": [
+        "Parlez-lui de ce que vous faites en temps réel : «Je mets les assiettes sur la table. Assiette rouge pour toi, assiette blanche pour moi.» Ce commentaire en direct est l'un des meilleurs outils pour développer le vocabulaire.",
+        "Attendez sa réponse. Même si votre bébé de 4 mois ne peut pas répondre verbalement, laissez-lui le temps de vocaliser. Ces tours de parole construisent la structure du dialogue.",
+        "Lisez-lui chaque jour, même 10 minutes. Peu importe le livre — ce qui compte, c'est que vous nommez les images, que vous questionnez, que vous interagissez avec le texte."
+      ]
+    },
+    {
+      "type": "resource",
+      "label": "Pour aller plus loin",
+      "links": [
+        {
+          "title": "TED Talk de Patricia Kuhl — Le génie linguistique des bébés",
+          "url": "https://www.ted.com/talks/patricia_kuhl_the_linguistic_genius_of_babies"
+        },
+        {
+          "title": "Santé publique France — Le développement du langage de l'enfant",
+          "url": "https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-neurodegeneratives/troubles-du-neuro-developpement"
+        }
+      ]
+    }
+  ]
+}

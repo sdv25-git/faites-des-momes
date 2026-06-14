@@ -1,0 +1,43 @@
+{
+  "id": "2025-01-newsletter",
+  "type": "newsletter",
+  "title": "Interagir avec les autres avant 5 ans",
+  "theme": "interactions-sociales",
+  "age_range": ["0-1", "1-2", "2-3", "3-4", "4-5"],
+  "published_at": "2025-01-01",
+  "read_time_seconds": 600,
+  "sections": [
+    {
+      "type": "intro",
+      "body": "Avant 5 ans, l'enfant n'est pas encore un «être social» au sens adulte du terme. Mais il est déjà profondément relié aux autres — d'abord à ses parents, puis progressivement au monde plus large. Ce mois-ci, on explore comment cette capacité à tisser des liens se développe, étape par étape, et ce que vous pouvez faire pour l'accompagner sans forcer."
+    },
+    {
+      "type": "insight",
+      "label": "Ce que dit la recherche",
+      "body": "Les travaux de la psychologue Alison Gopnik montrent que les bébés de seulement 9 mois ont déjà une préférence pour les personnes «gentilles» avec les autres. La solidarité, le sens de l'équité, l'empathie : ces capacités ne s'apprennent pas à l'école — elles émergent naturellement dans les 5 premières années, si l'environnement est sécurisé et bienveillant. Votre rôle n'est pas d'enseigner à votre enfant comment être social, mais de lui offrir un terrain fertile pour que cette capacité s'épanouisse."
+    },
+    {
+      "type": "tip",
+      "label": "À tester ce week-end",
+      "items": [
+        "Nommez les émotions que vous observez chez votre enfant en temps réel : «Tu sembles frustré parce que tu voulais ce jouet.» C'est la base de l'empathie.",
+        "Lors d'un conflit avec un autre enfant, résistez à l'envie d'arbitrer immédiatement. Laissez 30 secondes — vous serez surpris de ce que les enfants trouvent eux-mêmes.",
+        "Racontez-lui des histoires où les personnages ont des difficultés sociales et les résolvent. Cela crée des «scripts» mentaux qu'il réutilisera."
+      ]
+    },
+    {
+      "type": "resource",
+      "label": "Pour aller plus loin",
+      "links": [
+        {
+          "title": "Le bébé philosophe — Alison Gopnik (livre)",
+          "url": "https://www.babelio.com/livres/Gopnik-Le-bb-philosophe/189624"
+        },
+        {
+          "title": "Naitre et grandir — Le développement social de l'enfant",
+          "url": "https://naitreetgrandir.com/fr/etape/1-3-ans/comportement/developement-social/"
+        }
+      ]
+    }
+  ]
+}

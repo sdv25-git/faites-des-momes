@@ -1,0 +1,43 @@
+{
+  "id": "2025-03-newsletter",
+  "type": "newsletter",
+  "title": "Les émotions de 0 à 5 ans : comprendre pour mieux accompagner",
+  "theme": "emotions-regulation",
+  "age_range": ["0-1", "1-2", "2-3", "3-4", "4-5"],
+  "published_at": "2025-03-01",
+  "read_time_seconds": 660,
+  "sections": [
+    {
+      "type": "intro",
+      "body": "Votre enfant pique une colère monumentale parce que vous avez coupé son sandwich «du mauvais côté» ? Vous n'êtes pas seul·e. Les émotions de l'enfant avant 5 ans ne sont pas capricieuses, ni manipulatrices — elles sont le reflet d'un cerveau qui apprend à gérer des expériences intenses sans les outils pour le faire. Ce mois-ci, on explore la science de la régulation émotionnelle chez l'enfant, et ce que vous pouvez faire concrètement."
+    },
+    {
+      "type": "insight",
+      "label": "Ce que dit la recherche",
+      "body": "Le neuroscientifique Daniel Siegel explique que le cerveau de l'enfant est littéralement «non intégré» avant 5-6 ans : le cortex préfrontal (siège du raisonnement, de la gestion des émotions) est encore en construction. Quand votre enfant fait une crise, son cerveau émotionnel a pris le contrôle — il n'est plus en mesure de raisonner. C'est pour cela que «dis-moi pourquoi tu pleures» ne fonctionne pas en pleine crise : la zone du cerveau qui produit les mots est temporairement offline. Ce qui fonctionne ? D'abord calmer (présence, contact physique si accepté), puis comprendre, puis expliquer."
+    },
+    {
+      "type": "tip",
+      "label": "À tester ce week-end",
+      "items": [
+        "Nommez l'émotion AVANT que la crise n'éclate, si vous sentez la tension monter : «Je vois que tu es très frustré — c'est dur quand le puzzle ne rentre pas.»",
+        "Pendant la crise, restez physiquement proche sans parler. Votre présence calme suffit souvent à réduire l'intensité. Résistez à l'envie de vous éloigner ou de raisonner.",
+        "Après la crise, quand tout le monde est calmé, revenez sur ce qui s'est passé avec des mots simples : «Tout à l'heure tu étais très en colère parce que... Maintenant tu te sens comment ?»"
+      ]
+    },
+    {
+      "type": "resource",
+      "label": "Pour aller plus loin",
+      "links": [
+        {
+          "title": "Le cerveau de votre enfant — Daniel Siegel & Tina Payne Bryson (livre)",
+          "url": "https://www.babelio.com/livres/Siegel-Le-cerveau-de-votre-enfant/591674"
+        },
+        {
+          "title": "1, 2, 3 Soleils — La gestion des émotions chez les tout-petits",
+          "url": "https://www.123soleil.ch/fr/emotions-tout-petits"
+        }
+      ]
+    }
+  ]
+}

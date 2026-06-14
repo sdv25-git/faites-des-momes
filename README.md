@@ -1,10 +1,9 @@
 ---
-title: Faites Des Momes
-emoji: 👀
-colorFrom: indigo
-colorTo: red
+title: Faites des mômes
+emoji: 👶
+colorFrom: orange
+colorTo: yellow
 sdk: static
 pinned: false
+license: other
 ---
-
-Check out the configuration reference at https://huggingface.co/docs/hub/spaces-config-reference

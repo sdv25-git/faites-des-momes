@@ -1,19 +1,414 @@
-<!doctype html>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<title>My static Space</title>
-		<link rel="stylesheet" href="style.css" />
-	</head>
-	<body>
-		<div class="card">
-			<h1>Welcome to your static Space!</h1>
-			<p>You can modify this app directly by editing <i>index.html</i> in the Files and versions tab.</p>
-			<p>
-				Also don't forget to check the
-				<a href="https://huggingface.co/docs/hub/spaces" target="_blank">Spaces documentation</a>.
-			</p>
-		</div>
-	</body>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#F97316">
+  <meta name="description" content="Newsletter parentalité pour les 0-5 ans. Par la Fondation AlphaOmega.">
+  <title>Faites des mômes</title>
+
+  <!-- PWA -->
+  <link rel="manifest" href="/manifest.json">
+  <link rel="apple-touch-icon" href="/assets/icons/icon-152.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Faites des mômes">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Faites des mômes">
+  <meta property="og:description" content="1 email + 3 WhatsApp par mois. 100% gratuit.">
+  <meta property="og:image" content="/assets/og-image.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/tokens.css">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+</head>
+<body>
+
+  <!-- 1. Navigation -->
+  <nav class="nav" aria-label="Navigation principale">
+    <a href="/" class="nav__logo" aria-label="Faites des mômes — accueil">
+      <img src="/assets/logo.svg" alt="Faites des mômes" width="180" height="44">
+    </a>
+    <button class="btn-primary js-open-modal" id="btn-nav-inscription">Je m'inscris</button>
+  </nav>
+
+  <!-- 2. Hero -->
+  <section id="hero" class="hero">
+    <div class="hero__content">
+      <h1 class="hero__title">Élever des <em>mômes,</em><br>ça s'apprend.</h1>
+      <p class="hero__subtitle">1 newsletter + 3 messages WhatsApp par mois. Des repères clairs, validés par la recherche, pour accompagner votre enfant de 0 à 5 ans.</p>
+      <div class="hero__ctas">
+        <button class="btn-primary js-open-modal">Je m'inscris — c'est gratuit</button>
+        <a href="#example" class="hero__link">Voir un exemple →</a>
+      </div>
+    </div>
+    <div class="hero__photos">
+      <div class="photo-stack">
+        <img
+          src="/assets/photo-hero-1.jpg"
+          alt="Parent et enfant en train de lire ensemble"
+          class="photo-stack__img photo-stack__img--back"
+          loading="lazy"
+          decoding="async"
+          onerror="this.style.background='var(--color-border)';this.removeAttribute('src')"
+        >
+        <img
+          src="/assets/photo-hero-2.jpg"
+          alt="Enfant qui explore avec curiosité"
+          class="photo-stack__img photo-stack__img--front"
+          loading="lazy"
+          decoding="async"
+          onerror="this.style.background='var(--color-border)';this.removeAttribute('src')"
+        >
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Ticker -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__track">
+      <span>Faites.Des.Mômes.</span>
+      <span>Faites.Des.Mômes.</span>
+      <span>Faites.Des.Mômes.</span>
+      <span>Faites.Des.Mômes.</span>
+      <span>Faites.Des.Mômes.</span>
+      <span>Faites.Des.Mômes.</span>
+      <span>Faites.Des.Mômes.</span>
+      <span>Faites.Des.Mômes.</span>
+      <span>Faites.Des.Mômes.</span>
+      <span>Faites.Des.Mômes.</span>
+      <span>Faites.Des.Mômes.</span>
+      <span>Faites.Des.Mômes.</span>
+      <span>Faites.Des.Mômes.</span>
+      <span>Faites.Des.Mômes.</span>
+      <span>Faites.Des.Mômes.</span>
+      <span>Faites.Des.Mômes.</span>
+    </div>
+  </div>
+
+  <!-- 4. Why -->
+  <section id="why" class="why">
+    <div class="why__inner">
+      <div class="why__text">
+        <h2>15 ans d'engagement,<br><em>une conviction.</em></h2>
+        <p>Depuis 2009, la Fondation AlphaOmega œuvre pour que chaque enfant bénéficie du meilleur départ possible dans la vie. Faites des mômes, c'est notre réponse directe aux parents : des repères accessibles, fondés sur la science du développement de l'enfant.</p>
+        <p>Parce que les premières années comptent plus que tout, et que les parents méritent un soutien à la hauteur de ce qu'ils vivent.</p>
+      </div>
+      <div class="why__photo">
+        <img
+          src="/assets/photo-why.jpg"
+          alt="Enfant épanoui dans un environnement bienveillant"
+          loading="lazy"
+          decoding="async"
+          onerror="this.style.background='var(--color-border)';this.removeAttribute('src')"
+        >
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Format -->
+  <section id="format" class="format">
+    <div class="format__inner">
+      <div class="format__equation">
+        <div class="format__item">
+          <span class="format__number">1</span>
+          <span class="format__label">newsletter<br>mensuelle</span>
+        </div>
+        <span class="format__plus" aria-hidden="true">+</span>
+        <div class="format__item">
+          <span class="format__number">3</span>
+          <span class="format__label">messages<br>WhatsApp</span>
+        </div>
+        <span class="format__equals" aria-hidden="true">=</span>
+        <div class="format__result">
+          <h2>Faites des <em>mômes.</em></h2>
+        </div>
+      </div>
+      <p class="format__desc">Chaque mois, un thème, une approche. La newsletter approfondit, les WhatsApp distillent. Tout ça en moins de 15 minutes de lecture au total.</p>
+    </div>
+  </section>
+
+  <!-- 6. Example -->
+  <section id="example" class="example">
+    <div class="example__inner">
+      <div class="example__header">
+        <span class="badge badge--email">Exemple — Janvier 2025</span>
+        <h2>Ce mois-ci : <em>les interactions sociales.</em></h2>
+      </div>
+      <div class="example__timeline">
+        <div class="example__newsletter">
+          <article class="content-card content-card--newsletter">
+            <div class="content-card__meta">
+              <span class="badge badge--email">Newsletter</span>
+              <time datetime="2025-01-01">1er janvier</time>
+            </div>
+            <h3>Interagir avec les autres avant 5 ans</h3>
+            <p>Comment les enfants apprennent-ils à se faire des amis, à partager, à résoudre les conflits ? La science du développement social, expliquée simplement.</p>
+            <button class="btn-read">Lire · 10 min</button>
+          </article>
+        </div>
+        <div class="example__whatsapp">
+          <article class="whatsapp-card">
+            <div class="whatsapp-card__bubble">
+              <p class="whatsapp-card__question">Mon enfant ne veut pas partager : je fais quoi ?</p>
+              <p class="whatsapp-card__body">La vraie réponse, en 90 secondes.</p>
+              <span class="whatsapp-card__read-time">90s</span>
+            </div>
+          </article>
+          <article class="whatsapp-card">
+            <div class="whatsapp-card__bubble">
+              <p class="whatsapp-card__question">Mon bébé pleure dès que je le pose : c'est normal ?</p>
+              <p class="whatsapp-card__body">Ce que dit la théorie de l'attachement.</p>
+              <span class="whatsapp-card__read-time">60s</span>
+            </div>
+          </article>
+          <article class="whatsapp-card">
+            <div class="whatsapp-card__bubble">
+              <p class="whatsapp-card__question">Mon enfant mord ses camarades : comment réagir ?</p>
+              <p class="whatsapp-card__body">Pourquoi ça arrive et quoi faire maintenant.</p>
+              <span class="whatsapp-card__read-time">90s</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Ages -->
+  <section id="ages" class="ages">
+    <div class="ages__inner">
+      <h2><em>0 – 5 ans.</em><br>Chaque étape compte.</h2>
+      <p class="ages__intro">Notre contenu couvre cinq grandes tranches de développement, adaptées au stade de votre enfant.</p>
+      <div class="ages__grid">
+        <div class="ages__card">
+          <span class="ages__range">0 – 1 an</span>
+          <span class="ages__label">Bébé</span>
+          <p>Attachement, sensations, premiers repères du monde.</p>
+        </div>
+        <div class="ages__card">
+          <span class="ages__range">1 – 2 ans</span>
+          <span class="ages__label">Tout-petit</span>
+          <p>Motricité, autonomie naissante, premiers mots.</p>
+        </div>
+        <div class="ages__card">
+          <span class="ages__range">2 – 3 ans</span>
+          <span class="ages__label">Éveil</span>
+          <p>Langage, émotions, jeu symbolique et exploration.</p>
+        </div>
+        <div class="ages__card">
+          <span class="ages__range">3 – 4 ans</span>
+          <span class="ages__label">Langage</span>
+          <p>Socialisation, imaginaire débordant, raisonnement.</p>
+        </div>
+        <div class="ages__card">
+          <span class="ages__range">4 – 5 ans</span>
+          <span class="ages__label">Avant l'école</span>
+          <p>Autonomie, confiance en soi, curiosité intellectuelle.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Commitment -->
+  <section id="commitment" class="commitment">
+    <div class="commitment__inner">
+      <h2>Notre approche<br><em>en trois mots.</em></h2>
+      <div class="commitment__steps">
+        <div class="step">
+          <span class="step__number" aria-hidden="true">01</span>
+          <h3 class="step__title">Comprendre</h3>
+          <p class="step__body">Ce que dit vraiment la recherche sur le développement de l'enfant, sans jargon ni simplification excessive.</p>
+        </div>
+        <div class="step">
+          <span class="step__number" aria-hidden="true">02</span>
+          <h3 class="step__title">Repérer</h3>
+          <p class="step__body">Les signes qui comptent, les étapes normales, ce qui mérite attention et ce qui peut attendre sans inquiétude.</p>
+        </div>
+        <div class="step">
+          <span class="step__number" aria-hidden="true">03</span>
+          <h3 class="step__title">Agir</h3>
+          <p class="step__body">Des actions concrètes, testables ce week-end, adaptées à l'âge et au tempérament de votre enfant.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 9. CTA Final -->
+  <section id="cta-final" class="cta-final">
+    <div class="cta-final__inner">
+      <h2>Pas de spam.<br><em>Juste du soutien.</em></h2>
+      <p>1 email + 3 WhatsApp par mois. Désinscription en un clic, à tout moment.</p>
+      <button class="btn-primary js-open-modal">Je rejoins les parents FdM</button>
+    </div>
+  </section>
+
+  <!-- 10. Instagram -->
+  <section id="instagram" class="instagram">
+    <div class="instagram__inner">
+      <p>Des repères au quotidien ? Suivez-nous sur Instagram.</p>
+      <a
+        href="https://instagram.com/faitesdesmomes"
+        class="btn-primary"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Suivre Faites des mômes sur Instagram (nouvelle fenêtre)"
+      >
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+        </svg>
+        @faitesdesmomes
+      </a>
+    </div>
+  </section>
+
+  <!-- 11. Footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <p class="footer__brand">Faites des mômes — Fondation AlphaOmega</p>
+      <nav class="footer__links" aria-label="Liens légaux">
+        <a href="/mentions-legales.html">Mentions légales</a>
+        <a href="/confidentialite.html">Politique de confidentialité</a>
+        <a href="mailto:contact@faitesdesmomes.org">Contact</a>
+      </nav>
+      <p class="footer__copy">© 2025 Fondation AlphaOmega. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <!-- Modal inscription -->
+  <div
+    class="modal"
+    id="modal-inscription"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modal-title"
+    hidden
+  >
+    <div class="modal__overlay" id="modal-overlay" aria-hidden="true"></div>
+    <div class="modal__panel">
+      <button class="modal__close" id="modal-close" aria-label="Fermer la fenêtre d'inscription">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+          <path d="M18 6L6 18M6 6l12 12"/>
+        </svg>
+      </button>
+
+      <div class="modal__progress" aria-hidden="true">
+        <span class="modal__dot modal__dot--active"></span>
+        <span class="modal__dot"></span>
+        <span class="modal__dot"></span>
+        <span class="modal__dot"></span>
+      </div>
+
+      <!-- Étape 1 -->
+      <div class="modal__step modal__step--active" id="step-1">
+        <h2 class="modal__title" id="modal-title">Bienvenue !</h2>
+        <p class="modal__subtitle">Pour commencer, dites-nous qui vous êtes.</p>
+        <div class="modal__field">
+          <label for="field-prenom">Votre prénom</label>
+          <input type="text" id="field-prenom" name="prenom" placeholder="Marie" autocomplete="given-name" required>
+        </div>
+        <div class="modal__field">
+          <label>Vous êtes…</label>
+          <div class="modal__options">
+            <label class="modal__option">
+              <input type="radio" name="situation" value="parent">
+              Parent
+            </label>
+            <label class="modal__option">
+              <input type="radio" name="situation" value="grand-parent">
+              Grand-parent
+            </label>
+            <label class="modal__option">
+              <input type="radio" name="situation" value="futur-parent">
+              Futur parent
+            </label>
+            <label class="modal__option">
+              <input type="radio" name="situation" value="autre">
+              Autre
+            </label>
+          </div>
+        </div>
+        <button class="btn-primary" data-next="2">Suivant</button>
+      </div>
+
+      <!-- Étape 2 -->
+      <div class="modal__step" id="step-2">
+        <h2 class="modal__title" id="modal-title-2">L'âge de votre enfant</h2>
+        <p class="modal__subtitle">Sélectionnez une ou plusieurs tranches d'âge.</p>
+        <div class="modal__checkboxes">
+          <label class="modal__checkbox">
+            <input type="checkbox" name="age" value="0-1">
+            0 – 1 an (bébé)
+          </label>
+          <label class="modal__checkbox">
+            <input type="checkbox" name="age" value="1-2">
+            1 – 2 ans (tout-petit)
+          </label>
+          <label class="modal__checkbox">
+            <input type="checkbox" name="age" value="2-3">
+            2 – 3 ans (éveil)
+          </label>
+          <label class="modal__checkbox">
+            <input type="checkbox" name="age" value="3-4">
+            3 – 4 ans (langage)
+          </label>
+          <label class="modal__checkbox">
+            <input type="checkbox" name="age" value="4-5">
+            4 – 5 ans (avant l'école)
+          </label>
+        </div>
+        <button class="btn-primary" data-next="3">Suivant</button>
+        <button class="modal__back" data-back="1">Retour</button>
+      </div>
+
+      <!-- Étape 3 -->
+      <div class="modal__step" id="step-3">
+        <h2 class="modal__title">Votre adresse email</h2>
+        <p class="modal__subtitle">Pour recevoir la newsletter mensuelle.</p>
+        <div class="modal__field">
+          <label for="field-email">Email</label>
+          <input type="email" id="field-email" name="email" placeholder="marie@exemple.fr" autocomplete="email" required>
+        </div>
+        <button class="btn-primary" data-next="4">Suivant</button>
+        <button class="modal__back" data-back="2">Retour</button>
+      </div>
+
+      <!-- Étape 4 -->
+      <div class="modal__step" id="step-4">
+        <h2 class="modal__title">WhatsApp <span class="modal__optional">(optionnel)</span></h2>
+        <p class="modal__subtitle">Pour recevoir les 3 messages courts chaque mois.</p>
+        <div class="modal__field">
+          <label for="field-whatsapp">Numéro WhatsApp</label>
+          <input type="tel" id="field-whatsapp" name="whatsapp" placeholder="+33 6 12 34 56 78" autocomplete="tel">
+        </div>
+        <button class="btn-primary" id="modal-submit">Je m'inscris !</button>
+        <button class="modal__back" data-back="3">Retour</button>
+      </div>
+
+      <!-- Succès -->
+      <div class="modal__step" id="step-success">
+        <div class="modal__success">
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" aria-hidden="true" focusable="false">
+            <circle cx="28" cy="28" r="28" fill="#F97316" opacity="0.12"/>
+            <path d="M18 28l8 8 14-16" stroke="#F97316" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <h2 class="modal__title">C'est parti !</h2>
+          <p>Vous êtes inscrit·e. Votre premier contenu arrive le 1er du mois prochain.</p>
+          <a href="/app.html" class="btn-primary">Accéder à l'app →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/assets/js/sw-register.js"></script>
+  <script src="/assets/js/main.js" type="module"></script>
+</body>
 </html>

@@ -1,0 +1,150 @@
+{
+  "version": 1,
+  "last_updated": "2025-03-01",
+  "items": [
+    {
+      "id": "2025-01-newsletter",
+      "type": "newsletter",
+      "month": "2025-01",
+      "theme": "interactions-sociales",
+      "age_range": ["0-1", "1-2", "2-3", "3-4", "4-5"],
+      "title": "Interagir avec les autres avant 5 ans",
+      "summary": "Comment les enfants apprennent à se faire des amis, partager et résoudre des conflits.",
+      "read_time_seconds": 600,
+      "published_at": "2025-01-01",
+      "file": "content/2025/01/newsletter.json"
+    },
+    {
+      "id": "2025-01-wa-1",
+      "type": "whatsapp",
+      "month": "2025-01",
+      "theme": "interactions-sociales",
+      "age_range": ["2-3", "3-4", "4-5"],
+      "title": "Mon enfant ne veut pas partager : je fais quoi ?",
+      "summary": "La vraie réponse, en 90 secondes.",
+      "read_time_seconds": 90,
+      "published_at": "2025-01-06",
+      "file": "content/2025/01/whatsapp-1.json"
+    },
+    {
+      "id": "2025-01-wa-2",
+      "type": "whatsapp",
+      "month": "2025-01",
+      "theme": "interactions-sociales",
+      "age_range": ["0-1"],
+      "title": "Mon bébé pleure dès que je le pose : c'est normal ?",
+      "summary": "Ce que dit la théorie de l'attachement, en 60 secondes.",
+      "read_time_seconds": 60,
+      "published_at": "2025-01-13",
+      "file": "content/2025/01/whatsapp-2.json"
+    },
+    {
+      "id": "2025-01-wa-3",
+      "type": "whatsapp",
+      "month": "2025-01",
+      "theme": "interactions-sociales",
+      "age_range": ["1-2", "2-3"],
+      "title": "Mon enfant mord ses camarades : comment réagir ?",
+      "summary": "Pourquoi ça arrive et quoi dire maintenant.",
+      "read_time_seconds": 90,
+      "published_at": "2025-01-20",
+      "file": "content/2025/01/whatsapp-3.json"
+    },
+    {
+      "id": "2025-02-newsletter",
+      "type": "newsletter",
+      "month": "2025-02",
+      "theme": "langage-communication",
+      "age_range": ["0-1", "1-2", "2-3", "3-4", "4-5"],
+      "title": "Le langage se construit bien avant les premiers mots",
+      "summary": "Du babillage à la phrase complète : comprendre les étapes du langage de 0 à 5 ans.",
+      "read_time_seconds": 540,
+      "published_at": "2025-02-01",
+      "file": "content/2025/02/newsletter.json"
+    },
+    {
+      "id": "2025-02-wa-1",
+      "type": "whatsapp",
+      "month": "2025-02",
+      "theme": "langage-communication",
+      "age_range": ["1-2", "2-3"],
+      "title": "Mon enfant de 2 ans ne parle pas encore : je m'inquiète ?",
+      "summary": "Ce qui est normal, ce qui mérite une consultation.",
+      "read_time_seconds": 90,
+      "published_at": "2025-02-03",
+      "file": "content/2025/02/whatsapp-1.json"
+    },
+    {
+      "id": "2025-02-wa-2",
+      "type": "whatsapp",
+      "month": "2025-02",
+      "theme": "cognition-apprentissage",
+      "age_range": ["0-1", "1-2", "2-3"],
+      "title": "Comment lui lire des histoires pour que ça l'aide vraiment ?",
+      "summary": "3 gestes simples qui transforment la lecture en apprentissage.",
+      "read_time_seconds": 75,
+      "published_at": "2025-02-10",
+      "file": "content/2025/02/whatsapp-2.json"
+    },
+    {
+      "id": "2025-02-wa-3",
+      "type": "whatsapp",
+      "month": "2025-02",
+      "theme": "langage-communication",
+      "age_range": ["2-3", "3-4"],
+      "title": "Mon enfant répète tout en boucle : c'est quoi ce phénomène ?",
+      "summary": "L'écholalie, c'est quoi et faut-il s'en inquiéter ?",
+      "read_time_seconds": 90,
+      "published_at": "2025-02-17",
+      "file": "content/2025/02/whatsapp-3.json"
+    },
+    {
+      "id": "2025-03-newsletter",
+      "type": "newsletter",
+      "month": "2025-03",
+      "theme": "emotions-regulation",
+      "age_range": ["0-1", "1-2", "2-3", "3-4", "4-5"],
+      "title": "Les émotions de 0 à 5 ans : comprendre pour mieux accompagner",
+      "summary": "Colères, larmes, joie explosive : les émotions de l'enfant ne sont pas capricieuses.",
+      "read_time_seconds": 660,
+      "published_at": "2025-03-01",
+      "file": "content/2025/03/newsletter.json"
+    },
+    {
+      "id": "2025-03-wa-1",
+      "type": "whatsapp",
+      "month": "2025-03",
+      "theme": "emotions-regulation",
+      "age_range": ["2-3", "3-4"],
+      "title": "Mon enfant fait des crises de colère en public : je fais quoi ?",
+      "summary": "La méthode en 3 temps pour garder son calme et l'aider.",
+      "read_time_seconds": 90,
+      "published_at": "2025-03-03",
+      "file": "content/2025/03/whatsapp-1.json"
+    },
+    {
+      "id": "2025-03-wa-2",
+      "type": "whatsapp",
+      "month": "2025-03",
+      "theme": "emotions-regulation",
+      "age_range": ["0-1", "1-2"],
+      "title": "Comment aider mon bébé à gérer la séparation ?",
+      "summary": "L'angoisse de séparation : normale, passagère, gérable.",
+      "read_time_seconds": 75,
+      "published_at": "2025-03-10",
+      "file": "content/2025/03/whatsapp-2.json"
+    },
+    {
+      "id": "2025-03-wa-3",
+      "type": "whatsapp",
+      "month": "2025-03",
+      "theme": "confiance-en-soi",
+      "age_range": ["3-4", "4-5"],
+      "title": "Mon enfant a peur du noir : comment l'aider vraiment ?",
+      "summary": "Ce que ressent votre enfant et ce qui fonctionne.",
+      "read_time_seconds": 90,
+      "published_at": "2025-03-17",
+      "file": "content/2025/03/whatsapp-3.json"
+    }
+  ]
+}

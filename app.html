@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#F97316">
+  <meta name="description" content="Newsletter parentalité pour les 0-5 ans. Par la Fondation AlphaOmega.">
+  <title>Faites des mômes — Bibliothèque</title>
+
+  <!-- PWA -->
+  <link rel="manifest" href="/manifest.json">
+  <link rel="apple-touch-icon" href="/assets/icons/icon-152.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Faites des mômes">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Faites des mômes">
+  <meta property="og:description" content="1 email + 3 WhatsApp par mois. 100% gratuit.">
+  <meta property="og:image" content="/assets/og-image.jpg">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/tokens.css">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/app.css">
+</head>
+<body class="app-body">
+
+  <!-- Header -->
+  <header class="app-header">
+    <a href="/index.html" class="app-header__logo" aria-label="Faites des mômes — accueil">
+      <img src="/assets/logo.svg" alt="Faites des mômes" width="140" height="34">
+    </a>
+    <div class="app-header__actions">
+      <button class="app-header__btn" id="btn-filter-toggle" aria-label="Afficher/masquer les filtres" aria-expanded="false" aria-controls="filter-bar">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+          <path d="M3 6h18M7 12h10M11 18h2"/>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Filter bar -->
+  <div class="filter-bar" id="filter-bar" aria-label="Filtres de contenu">
+    <!-- Type -->
+    <div class="filter-group" role="group" aria-label="Filtrer par type">
+      <button class="filter-btn filter-btn--active" data-filter-type="type" data-filter-value="all">Tous</button>
+      <button class="filter-btn" data-filter-type="type" data-filter-value="newsletter">Newsletter</button>
+      <button class="filter-btn" data-filter-type="type" data-filter-value="whatsapp">WhatsApp</button>
+    </div>
+
+    <!-- Thèmes -->
+    <div class="filter-group filter-group--scroll" role="group" aria-label="Filtrer par thème">
+      <button class="filter-btn filter-chip" data-filter-type="theme" data-filter-value="interactions-sociales">Interactions sociales</button>
+      <button class="filter-btn filter-chip" data-filter-type="theme" data-filter-value="langage-communication">Langage</button>
+      <button class="filter-btn filter-chip" data-filter-type="theme" data-filter-value="cognition-apprentissage">Cognition</button>
+      <button class="filter-btn filter-chip" data-filter-type="theme" data-filter-value="emotions-regulation">Émotions</button>
+      <button class="filter-btn filter-chip" data-filter-type="theme" data-filter-value="confiance-en-soi">Confiance</button>
+      <button class="filter-btn filter-chip" data-filter-type="theme" data-filter-value="curiosite-naturelle">Curiosité</button>
+      <button class="filter-btn filter-chip" data-filter-type="theme" data-filter-value="motricite-corps">Motricité</button>
+      <button class="filter-btn filter-chip" data-filter-type="theme" data-filter-value="sommeil-routine">Sommeil</button>
+    </div>
+
+    <!-- Tranches d'âge -->
+    <div class="filter-group" role="group" aria-label="Filtrer par tranche d'âge">
+      <button class="filter-btn filter-age" data-filter-type="age" data-filter-value="0-1">0–1</button>
+      <button class="filter-btn filter-age" data-filter-type="age" data-filter-value="1-2">1–2</button>
+      <button class="filter-btn filter-age" data-filter-type="age" data-filter-value="2-3">2–3</button>
+      <button class="filter-btn filter-age" data-filter-type="age" data-filter-value="3-4">3–4</button>
+      <button class="filter-btn filter-age" data-filter-type="age" data-filter-value="4-5">4–5</button>
+    </div>
+  </div>
+
+  <!-- Feed principal -->
+  <main class="content-feed" id="content-feed" aria-live="polite" aria-label="Contenus disponibles">
+    <div class="feed-loading" id="feed-loading" aria-label="Chargement en cours">
+      <div class="feed-loading__spinner" aria-hidden="true"></div>
+      <p>Chargement du contenu…</p>
+    </div>
+  </main>
+
+  <!-- Overlay article (full-screen) -->
+  <div
+    class="article-overlay"
+    id="article-overlay"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="article-title"
+    hidden
+  >
+    <div class="article-overlay__inner">
+      <button class="article-overlay__close" id="article-close" aria-label="Fermer l'article">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+          <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Retour
+      </button>
+      <div class="article-overlay__content" id="article-content" tabindex="-1"></div>
+    </div>
+  </div>
+
+  <!-- Bottom nav (mobile) -->
+  <nav class="bottom-nav" aria-label="Navigation principale">
+    <a href="/index.html" class="bottom-nav__item" aria-label="Accueil">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+        <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+        <polyline points="9 22 9 12 15 12 15 22"/>
+      </svg>
+      <span>Accueil</span>
+    </a>
+    <a href="/app.html" class="bottom-nav__item" aria-current="page" aria-label="Bibliothèque">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+        <path d="M4 19.5A2.5 2.5 0 016.5 17H20"/>
+        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/>
+      </svg>
+      <span>Bibliothèque</span>
+    </a>
+    <a href="/index.html#cta-final" class="bottom-nav__item" aria-label="Profil">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+        <circle cx="12" cy="7" r="4"/>
+      </svg>
+      <span>Profil</span>
+    </a>
+  </nav>
+
+  <script src="/assets/js/sw-register.js"></script>
+  <script src="/assets/js/app.js" type="module"></script>
+</body>
+</html>
