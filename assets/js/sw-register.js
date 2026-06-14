@@ -14,3 +14,28 @@ if ('serviceWorker' in navigator) {
       .catch(err => console.warn('SW registration failed:', err));
   });
 }
+
+// Capture le prompt d'installation Android Chrome
+let _installPrompt = null;
+
+window.addEventListener('beforeinstallprompt', e => {
+  e.preventDefault();
+  _installPrompt = e;
+  document.dispatchEvent(new CustomEvent('pwa:installable'));
+});
+
+window.addEventListener('appinstalled', () => {
+  _installPrompt = null;
+  document.dispatchEvent(new CustomEvent('pwa:installed'));
+});
+
+// API publique appelable depuis index.html / app.html
+window.pwaInstall = async function () {
+  if (!_installPrompt) return false;
+  _installPrompt.prompt();
+  const { outcome } = await _installPrompt.userChoice;
+  if (outcome === 'accepted') _installPrompt = null;
+  return outcome === 'accepted';
+};
+
+window.pwaIsInstallable = function () { return !!_installPrompt; };
