@@ -1,4 +1,4 @@
-const CACHE_STATIC = 'fdm-static-v1';
+const CACHE_STATIC = 'fdm-static-v2';
 const CACHE_CONTENT = 'fdm-content-v1';
 
 const PRECACHE = [
