@@ -30,8 +30,9 @@
   <link rel="stylesheet" href="/assets/css/tokens.css">
   <link rel="stylesheet" href="/assets/css/base.css">
   <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/app.css">
 </head>
-<body>
+<body style="padding-bottom: calc(64px + env(safe-area-inset-bottom))">
 
   <!-- 1. Navigation -->
   <nav class="nav" aria-label="Navigation principale">
@@ -445,6 +446,31 @@
       ">Installer</button>
     </div>
   </div>
+
+  <!-- Bottom nav (toutes pages) -->
+  <nav class="bottom-nav" aria-label="Navigation principale">
+    <a href="/index.html" class="bottom-nav__item" aria-current="page" aria-label="Accueil">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+        <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+        <polyline points="9 22 9 12 15 12 15 22"/>
+      </svg>
+      <span>Accueil</span>
+    </a>
+    <a href="/app.html" class="bottom-nav__item" aria-label="Bibliothèque">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+        <path d="M4 19.5A2.5 2.5 0 016.5 17H20"/>
+        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/>
+      </svg>
+      <span>Bibliothèque</span>
+    </a>
+    <a href="/index.html#cta-final" class="bottom-nav__item" aria-label="Profil">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+        <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/>
+        <circle cx="12" cy="7" r="4"/>
+      </svg>
+      <span>Profil</span>
+    </a>
+  </nav>
 
   <script src="/assets/js/sw-register.js"></script>
   <script src="/assets/js/main.js" type="module"></script>

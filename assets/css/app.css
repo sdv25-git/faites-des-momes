@@ -401,12 +401,8 @@
 }
 
 @media (min-width: 900px) {
-  .bottom-nav {
-    display: none;
-  }
-
   .app-body {
-    padding-bottom: 0;
+    padding-bottom: calc(64px + env(safe-area-inset-bottom));
   }
 }
 
