@@ -133,10 +133,11 @@
   </nav>
 
   <!-- Bannière installation PWA -->
-  <div id="pwa-banner" hidden style="
+  <div id="pwa-banner" style="
+    display:none;
     position:fixed;bottom:calc(64px + env(safe-area-inset-bottom));left:0;right:0;z-index:9000;
     background:#3b3f44;color:#FFF5DE;
-    display:flex;align-items:center;justify-content:space-between;
+    align-items:center;justify-content:space-between;
     padding:12px 16px;gap:12px;
     box-shadow:0 -2px 16px rgba(0,0,0,0.2);
   ">
@@ -145,11 +146,11 @@
       <span style="opacity:.75;font-size:12px">Accès hors-ligne, icône sur l'écran d'accueil</span>
     </p>
     <div style="display:flex;gap:8px;flex-shrink:0">
-      <button onclick="document.getElementById('pwa-banner').hidden=true" style="
+      <button onclick="document.getElementById('pwa-banner').style.display='none'" style="
         background:rgba(255,245,222,0.15);color:#FFF5DE;border:none;
         padding:7px 12px;font-size:12px;cursor:pointer;border-radius:2px
       ">✕</button>
-      <button onclick="pwaInstall().then(ok=>{ if(ok) document.getElementById('pwa-banner').hidden=true })" style="
+      <button onclick="pwaInstall().then(ok=>{ if(ok) document.getElementById('pwa-banner').style.display='none' })" style="
         background:#9E0059;color:#fff;border:none;
         padding:7px 14px;font-weight:700;font-size:12px;cursor:pointer;border-radius:2px
       ">Installer</button>
@@ -160,7 +161,7 @@
   <script src="/assets/js/app.js" type="module"></script>
   <script>
     document.addEventListener('pwa:installable', () => {
-      document.getElementById('pwa-banner').hidden = false;
+      document.getElementById('pwa-banner').style.display = 'flex';
     });
   </script>
 </body>
