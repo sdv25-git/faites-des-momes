@@ -436,7 +436,7 @@
       </div>
     </div>
     <div style="display:flex;align-items:center;gap:10px;flex-shrink:0">
-      <button onclick="document.getElementById('pwa-banner').style.display='none'" style="
+      <button onclick="sessionStorage.setItem('fdm_banner_dismissed','1');document.getElementById('pwa-banner').style.display='none'" style="
         background:rgba(255,245,222,0.15);color:#FFF5DE;border:none;
         padding:8px 14px;font-size:13px;cursor:pointer;border-radius:2px
       ">Plus tard</button>
@@ -476,7 +476,9 @@
   <script src="/assets/js/main.js" type="module"></script>
   <script>
     document.addEventListener('pwa:installable', () => {
-      document.getElementById('pwa-banner').style.display = 'flex';
+      if (!sessionStorage.getItem('fdm_banner_dismissed')) {
+        document.getElementById('pwa-banner').style.display = 'flex';
+      }
     });
   </script>
 </body>
