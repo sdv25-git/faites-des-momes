@@ -1,30 +1,31 @@
 :root {
-  /* Couleurs */
-  --color-bg:          #F5F0E8;
+  /* Couleurs — source : faitesdesmomes.org/css/styles.css */
+  --color-bg:          #FFF5DE;   /* crème chaude — fond général */
   --color-bg-section:  #FFFFFF;
-  --color-accent:      #7B3FBE;
-  --color-accent-dark: #6B2FAE;
-  --color-highlight:   rgba(196, 177, 230, 0.48);
-  --color-text:        #1F1F1F;
-  --color-text-light:  #6B6B6B;
-  --color-border:      #E2D9CE;
+  --color-accent:      #9E0059;   /* framboise — CTAs, highlights */
+  --color-accent-dark: #7a0045;
+  --color-purple:      #6600DD;   /* violet vif — accent secondaire */
+  --color-highlight:   #CCBEFF;   /* lavande — surlignage texte */
+  --color-text:        #3b3f44;   /* encre */
+  --color-text-light:  #888888;
+  --color-border:      rgba(18,18,18,0.10);
   --color-whatsapp:    #25D366;
   --color-overlay:     rgba(26,26,26,0.55);
 
   /* Typographie */
-  --font-display: 'Space Grotesk', system-ui, sans-serif;
-  --font-body:    'Inter', system-ui, sans-serif;
+  --font-display: 'Archivo Black', 'Oswald', sans-serif;
+  --font-body:    'Arimo', 'Arial', sans-serif;
 
-  --size-xs:   0.75rem;
-  --size-sm:   0.875rem;
-  --size-base: 1rem;
-  --size-md:   1.125rem;
-  --size-lg:   1.375rem;
-  --size-xl:   1.75rem;
-  --size-2xl:  2.25rem;
-  --size-3xl:  3rem;
-  --size-4xl:  3.75rem;
-  --size-5xl:  4.5rem;
+  --size-xs:   0.75rem;   /*  12px */
+  --size-sm:   0.875rem;  /*  14px */
+  --size-base: 1rem;      /*  16px */
+  --size-md:   1.125rem;  /*  18px */
+  --size-lg:   1.375rem;  /*  22px */
+  --size-xl:   1.75rem;   /*  28px */
+  --size-2xl:  2.25rem;   /*  36px */
+  --size-3xl:  3rem;      /*  48px */
+  --size-4xl:  3.75rem;   /*  60px */
+  --size-5xl:  4.5rem;    /*  72px */
 
   /* Spacing */
   --space-1:  0.25rem;
