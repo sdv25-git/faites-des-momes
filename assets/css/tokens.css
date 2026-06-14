@@ -1,17 +1,18 @@
 :root {
   /* Couleurs */
-  --color-bg:          #FFF8F2;
+  --color-bg:          #F5F0E8;
   --color-bg-section:  #FFFFFF;
-  --color-accent:      #F97316;
-  --color-accent-dark: #EA6C0B;
-  --color-text:        #1A1A1A;
+  --color-accent:      #7B3FBE;
+  --color-accent-dark: #6B2FAE;
+  --color-highlight:   rgba(196, 177, 230, 0.48);
+  --color-text:        #1F1F1F;
   --color-text-light:  #6B6B6B;
-  --color-border:      #E8DDD4;
+  --color-border:      #E2D9CE;
   --color-whatsapp:    #25D366;
   --color-overlay:     rgba(26,26,26,0.55);
 
   /* Typographie */
-  --font-display: 'Playfair Display', Georgia, serif;
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
   --font-body:    'Inter', system-ui, sans-serif;
 
   --size-xs:   0.75rem;
